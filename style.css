@@ -100,11 +100,12 @@ section h2 {
     box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
 
-.card-img {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    background-color: #334155;
+/* ⭕️ 変更後（こちらに書き換えてください） */
+img.card-img {
+    width: 100% !important;
+    height: auto !important; /* 高さを固定せず、横幅に合わせて自動調整する */
+    object-fit: contain;     /* 画像全体を枠内に収める指定 */
+    display: block;
 }
 
 .card h3 {
@@ -150,3 +151,34 @@ footer {
     font-size: 0.8rem;
     color: #64748b;
 }
+
+/* 🖨 印刷専用の設定（背景を白ベースにし、文字を読みやすく、作品画像は残す） */
+@media print {
+    body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+    }
+    .container {
+        padding: 10px;
+    }
+    header {
+        background: #f1f5f9 !important;
+        border-bottom: 2px solid #3b82f6 !important;
+        padding: 40px 20px;
+    }
+    header h1 {
+        color: #0f172a !important;
+    }
+    .profile p, .section-desc, .card .card-text {
+        color: #334155 !important;
+    }
+    .card {
+        background: #f8fafc !important; 
+        border: 1px solid #cbd5e1 !important;
+        page-break-inside: avoid; 
+    }
+    .card h3 {
+        color: #0f172a !important;
+    }
+}
+

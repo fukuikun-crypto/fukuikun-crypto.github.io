@@ -1,0 +1,152 @@
+/* 全体のリセットと共通設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: #0f172a; /* 深いダークブルー */
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ヘッダーのデザイン */
+header {
+    background: linear-gradient(135deg, #1e1b4b, #311042); /* 幻想的なグラデーション */
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 2px solid #3b82f6;
+}
+
+header h1 {
+    font-size: 3rem; /* 名前を大きく強調 */
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    color: #3b82f6;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* 各セクションの共通設定 */
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #3b82f6;
+    margin-bottom: 25px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+}
+
+/* プロフィール */
+.profile .name-large {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.profile p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #cbd5e1;
+}
+
+/* 作品セクションの説明文 */
+.section-desc {
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+/* 作品を並べるグリッド（並列）レイアウト */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* 作品カードのデザイン */
+.card {
+    background-color: #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+}
+
+/* マウスを乗せた時の動き */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #334155;
+}
+
+.card h3 {
+    padding: 15px 15px 5px 15px;
+    font-size: 1.15rem;
+    color: #ffffff;
+}
+
+.card .card-sub {
+    padding: 0 15px 10px 15px;
+    font-size: 0.85rem;
+    color: #3b82f6;
+}
+
+.card .card-text {
+    padding: 0 15px 15px 15px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    flex-grow: 1;
+}
+
+/* ボタン（noteへのリンク用） */
+.btn {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 14px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #020617;
+    font-size: 0.8rem;
+    color: #64748b;
+}
